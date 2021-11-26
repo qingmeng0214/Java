@@ -5,12 +5,11 @@ public class Readnum {
 	public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        int[] a = new int[12];
+        int[] a = new int[100];
         int n = 0;
-        System.out.print("Enter 10 numbers: ");
-        for(int i=0;i<10;i++)
-        {
-            int tmp=input.nextInt();
+        System.out.print("Enter  numbers: ");
+        int tmp=input.nextInt();
+        while(tmp!=0) {
             boolean in = false;
             for(int j=0;j<n;j++)
             {
@@ -25,7 +24,9 @@ public class Readnum {
                 a[n]=tmp;
                 n++;
             }
+            tmp=input.nextInt();
         }
+        
         System.out.println("The number of distinct number is "+n);
         System.out.print("The distinct numbers are: ");
         for(int i=0;i<n;i++)

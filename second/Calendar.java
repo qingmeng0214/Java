@@ -20,14 +20,22 @@ public class Calendar {
 			System.out.printf("            %s%d              \n",months[i-1],year);
 			System.out.printf("______________________________\n");
 			System.out.println(" Sun Mon Tue Wed Thu Fri Sat");
+			for(int k=0;k<week;k++) {
+				System.out.printf("    ");
+			}
 			int count =0;
 			int j;
 			for(j=1;j<=days[i-1];j++) {
 				System.out.printf("%4d",j);
 				count+=1;
-				if(count%7==0)
+				if(week+j==7) {
+					System.out.printf("\n");
+					count=count-j;
+				}				
+				if(count%7==0&&count!=0)
 					System.out.printf("\n");
 			}
+			week=(week+days[i-1]) % 7;
 		}
 		
 		
