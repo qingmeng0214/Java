@@ -10,5 +10,6 @@
 	<classpathentry kind="src" path="third"/>
 	<classpathentry kind="src" path="fouth"/>
 	<classpathentry kind="src" path="sixth"/>
+	<classpathentry kind="src" path="fifth"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
